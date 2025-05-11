@@ -63,4 +63,9 @@ public class Partita {
     public Giocatore getGiocatore() {
         return this.giocatore;  // Restituisce l'istanza del Giocatore
     }
+
+    public boolean giocatoreIsVivo() {
+        return this.giocatore.getCfu() > 0;
+    }
+
 }

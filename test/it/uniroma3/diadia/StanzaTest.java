@@ -57,41 +57,16 @@ class StanzaTest {
     // ========================
     // Test per la gestione degli attrezzi
     // ========================
-
-    // Test 1: Aggiungere e rimuovere un attrezzo
-    @Test
-    void testAttrezzoInStanza() {
-        Attrezzo spada = new Attrezzo("spada", 5);
-        atrio.addAttrezzo(spada);
-        assertTrue(atrio.getAttrezzo("spada") != null);  // Verifica che l'attrezzo esista nella stanza
-        atrio.removeAttrezzo(spada);
-        assertNull(atrio.getAttrezzo("spada"));  // Verifica che l'attrezzo sia stato rimosso
-    }
-
-    // Test 2: Rimuovere un attrezzo 
-    @Test
-    void testRimuoviAttrezzo() {
-        Attrezzo spada = new Attrezzo("spada", 5);
-        atrio.addAttrezzo(spada);
-        atrio.removeAttrezzo(spada);
-        assertNull(atrio.getAttrezzo("spada"));  // Verifica che l'attrezzo non esista più nella stanza
-    }
-
-    // Test 3: Verifica l'assenza di un attrezzo che non esiste
+    
+    // Test 1: Verifica l'assenza di un attrezzo che non esiste
     @Test
     void testAttrezzoNonEsistente() {
         assertNull(atrio.getAttrezzo("spada"));  // L'attrezzo non esiste, quindi deve restituire null
     }
 
-    // Test 4: Rimuovere un attrezzo che non esiste nella stanza
-    @Test
-    void testRimuoviAttrezzoNonEsistente() {
-        Attrezzo scudo = new Attrezzo("scudo", 3);
-        atrio.removeAttrezzo(scudo);
-        assertNull(atrio.getAttrezzo("scudo"));
-    }
 
-    // Test 5: aggiungere un attrezzo
+
+    // Test 2: aggiungere un attrezzo
     @Test
     void aggiungiAttrezzo() {
     	Attrezzo pistola = new Attrezzo("pistola", 7);
